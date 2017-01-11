@@ -1,0 +1,27 @@
+/*Style Sheet for Luke B Barker Navigation Bar*/
+
+.navbar {
+  height: 120px;
+  width: 100%;
+  border: 1px solid #565656;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.nav-primaryLinks {
+  flex: 1;
+  background-color: red;
+  width: 100%;
+}
+
+.nav-brandingContainer {
+  flex: 2;
+  background-color: green;
+  width: 100%;
+}
+
+.nav-secondaryLinks {
+  flex: 1;
+  background-color: blue;
+  width: 100%;
+}
