@@ -33,7 +33,7 @@
                     <li><a>ABOUT</a></li>
                 </ul>
                 <ul id="nav-secondaryLinks">
-                    <li><a>HOME</a></li>
+                    <li class="active"><a>HOME</a></li>
                 </ul>
 
                 <div id="nav-brandingContainer">
@@ -49,6 +49,27 @@
             <p id="footer-text" style="margin-bottom: 0px;">919-259-2096</p>
             <img style="height: 9px;" src="img/dots.svg">
         </footer>
+
+        <script>
+            /**
+             * Listen to scroll to change header opacity class
+             */
+            function checkScroll() {
+                var startY = $('#navbar').height() / 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('#navbar').addClass("scrolled");
+                } else {
+                    $('#navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('#navbar').length > 0) {
+                $(window).on("scroll load resize", function() {
+                    checkScroll();
+                });
+            }
+        </script>
 
     </body>
 

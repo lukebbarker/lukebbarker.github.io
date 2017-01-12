@@ -55,14 +55,14 @@ footer {
     line-height: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 400;
 
   }
 
   .wrapper {
     height: 2000px;
     background-color: white;
-    border: 1px solid grey;
+    border: 0px solid grey;
     width: 90%;
     margin-left: 5%;
   }
