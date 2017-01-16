@@ -4,7 +4,7 @@
 #nav-wrapper {
     margin: 0 auto;
     width: 100%;
-    height: 110px;
+    height: 150px;
 }
 
 
@@ -114,8 +114,8 @@
 
 .link-divider {
   cursor: default;
-  padding-left: 13px !important;
-  padding-right: 13px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   border-top: 4px solid white !important;
 }
 
@@ -130,6 +130,11 @@
   #nav-brandingContainer {
       padding-top: 20px;
   }
+  .link-divider {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -167,11 +172,16 @@
     display: flex;
     display: -webkit-flex;
     padding: 50px 0px 20px 0;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     border-top: 4px solid white;
     -webkit-transition: .1s linear;
     transition: .1s linear;}
+
+    /*#nav-primaryLinks li:before {
+        content: '/';
+        padding: 0 12px 0 9px;
+    }*/
 
 #nav-primaryLinks li:hover {
     border-top: 4px solid rgba(0,0,0,.5);
@@ -244,7 +254,7 @@
     display: flex;
     display: -webkit-flex;
     padding: 50px 0px 20px 0;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     border-top: 4px solid white;
     -webkit-transition: .1s linear;
@@ -314,7 +324,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .link-divider {
     cursor: default;
     padding-left: 10px !important;
@@ -325,9 +335,9 @@
     padding-left: 10px;
   }
   #nav-secondaryLinks li{
-    font-size: 12px;
+    font-size: 10px;
   }
   #nav-primaryLinks li{
-    font-size: 12px;
+    font-size: 10px;
   }
 }
