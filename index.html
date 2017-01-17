@@ -16,12 +16,15 @@
 
         <script src="js/jquery.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/jquery-ui.js"></script>
+
 
 
     </head>
 
 
     <body>
+
         <div id="nav-wrapper">
             <div id="navbar" class="sticky show">
                 <ul id="nav-primaryLinks">
@@ -43,8 +46,10 @@
             </div>
         </div>
 
-        <div class="wrapper">
-
+        <div id="banner_container">
+            <div class="wrapper">
+                <img id="banner" src="img/luke_top_banner_logo.png">
+            </div>
         </div>
 
         <div class="wrapper">
@@ -101,6 +106,33 @@
                     checkScroll();
                 });
             }
+        </script>
+
+        <script>
+            function opacity() {
+                $('#banner_container').toggleClass('opacity', 500);
+            }
+            $(document).ready(function() {
+                setTimeout(opacity, 500);
+            });
+        </script>
+
+        <script>
+            function shrink() {
+                $('#banner_container').toggleClass('shrink', 100);
+            }
+            $(document).ready(function() {
+                setTimeout(shrink, 1450);
+            });
+        </script>
+
+        <script>
+            function shrink2() {
+                $('#banner').toggleClass('shrink_padding', 100);
+            }
+            $(document).ready(function() {
+                setTimeout(shrink2, 1350);
+            });
         </script>
 
     </body>
