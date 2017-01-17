@@ -10,7 +10,8 @@ body {
     margin: 0;
     overflow-y: scroll;
     letter-spacing: 0.5px;
-    line-height: 29px
+    line-height: 29px;
+    overflow-x: hidden;
 }
 body a {
     cursor: pointer;
@@ -154,6 +155,9 @@ line-height: 2.7vw;
 .explore {
 font-size: 2vw;
 }
+.explore-box:hover {
+font-size: 10vw;
+}
 }
 
 
@@ -172,7 +176,7 @@ font-size: 2vw;
     width: 48%;
     border: 0px solid black;
     height: auto;
-    margin-bottom: 4%;
+    margin-bottom: 4vh;
     -webkit-transition: .5s ease-out;
     transition: .5s ease-out;
 }
