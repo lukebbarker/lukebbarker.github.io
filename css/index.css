@@ -1,5 +1,4 @@
 /*Style Sheet for Luke B Barker Homepage*/
-
 body {
     font-family: 'montserrat', Helvetica, sans-serif;
     color: #000;
@@ -11,15 +10,25 @@ body {
     overflow-y: scroll;
     letter-spacing: 0.5px;
     line-height: 29px;
+    position: relative;
     overflow-x: hidden;
 }
+
+
 body a {
     cursor: pointer;
+    text-decoration: none;
 }
 @media (max-width: 400px) {
     body {
         font-size: 15px;
-        line-height: 20px
+        line-height: 20px;
+        position: relative;
+        overflow-x: hidden;
+    }
+    html {
+      position: relative;
+      overflow-x: hidden;
     }
 }
 @media (-webkit-min-device-pixel-ratio: 5) and (min-width: 5100px) {
@@ -59,8 +68,8 @@ footer {
     background-color: rgba(0, 0, 0, .7);
     z-index: 10000;
     opacity: 0;
-    -webkit-transition: .3s ease-out;
-    transition: .3s ease-out;
+    -webkit-transition: .3s;
+    transition: .3s;
 }
 
 
@@ -83,16 +92,21 @@ footer {
 }
 
 .overlay-desc h1 {
+  -webkit-transition: .4s;
+  transition: .4s;
     text-transform: uppercase;
     color: white;
-    font-size: 4vw;
+    font-size: 3.5vw;
     text-align: center;
     flex: 1 100%;
     margin: 0;
+    margin-bottom: 1vw;
 
 }
 
 .overlay-desc p {
+  -webkit-transition: .4s;
+  transition: .4s;
       color: white;
     text-transform: uppercase;
     font-size: 1vw;
@@ -108,7 +122,7 @@ footer {
 }
 
 .explore {
-    font-size: 1vw;
+    font-size: 1.2vw;
     text-align: center;
     color: white;
     height: auto;
@@ -117,31 +131,49 @@ footer {
 }
 
 .explore-box {
+  padding: 5px;
   width: 20%;
   margin-left: 40%;
   border: 2px solid white;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .3 ease-out;
+  transition: .3 ease-out;
+
 }
 
 .explore-box:hover {
-  border: 0px solid white;
+  border: 0px solid transparent;
   color: black;
   font-size: 4vw;
   width: 100%;
   margin-left: 10%;
   margin: 0;
   font-weight: 800;
+  margin-top: .5vw;
 }
 
 .overlay-desc.hovered {
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: .4s;
+  transition: .4s;
   background-color: white;
   color: black;
   border: 3px solid black;
+  padding-top: 25%;
+  padding-bottom: 25%;
 }
 
+.overlay-desc.hovered h1{
+color: black;
+font-size: 2vw;
+margin-bottom: 0vw;
+
+}
+
+.overlay-desc.hovered p{
+  color: black;
+  font-size: .7vw;
+  margin-bottom: 1vw;
+
+}
 
 @media (max-width: 700px) {
   .overlay-desc h1 {
@@ -155,9 +187,31 @@ line-height: 2.7vw;
 .explore {
 font-size: 2vw;
 }
-.explore-box:hover {
-font-size: 10vw;
+.explore-box {
+padding: 0px;
 }
+.explore-box:hover {
+font-size: 7.5vw;
+}
+
+.overlay-desc.hovered {
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
+.overlay-desc.hovered h1{
+font-size: 6vw;
+}
+
+.overlay-desc.hovered p{
+  font-size: 1.7vw;
+}
+
 }
 
 
@@ -171,6 +225,11 @@ font-size: 10vw;
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    overflow-x: hidden;
+}
+
+.wrapper a {
+  color: white;
 }
 .child {
     width: 48%;
@@ -183,6 +242,8 @@ font-size: 10vw;
 .child img {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+
 }
 @media (max-width: 700px) {
     .child {
@@ -278,3 +339,143 @@ img#banner {
         transform: translateY(0);
     }
 }
+
+
+/*LIGHTBOX*/
+
+.short-animate {
+  -webkit-transition:.5s ease-in-out;
+  -moz-transition:.5s ease-in-out;
+  -ms-transition:.5s ease-in-out;
+  -o-transition:.5s ease-in-out;
+  transition:.5s ease-in-out;
+}
+
+.long-animate {
+  -webkit-transition: .5s .5s ease-in-out;
+  -moz-transition: .5s .5s ease-in-out;
+  -ms-transition: .5s .5s ease-in-out;
+  -o-transition:.5s .5s ease-in-out;
+  transition:.5s .5s ease-in-out;
+}
+
+.lightbox {
+  position:fixed;
+  top:-100%;
+  bottom:100%;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,.9);
+  z-index:501;
+  opacity:0;
+  padding: 5%;
+}
+
+.lightbox .inner {
+  width: 100%;
+  height: 100%;
+border: 5px solid white;
+}
+
+.lightbox .inner h1 {
+width: 100%;
+text-align: center;
+color: white;
+}
+
+.lightbox img {
+	position:absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  max-width:0%;
+  max-height:0%;
+}
+
+#lightbox-controls {
+  position:fixed;
+  height:70px;
+  width:70px;
+  top:-70px;
+  right:0;
+  z-index:502;
+  background:rgba(0,0,0,.1);
+}
+
+#close-lightbox {
+  display:block;
+  position:absolute;
+  overflow:hidden;
+  height:50px;
+  width:50px;
+  text-indent:-5000px;
+  right:10px;
+  top:10px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+#close-lightbox:before {
+	content:'';
+  display:block;
+  position:absolute;
+  height:0px;
+  width:3px;
+  left:24px;
+  top:0;
+  background:white;
+  border-radius:2px;
+  -webkit-transition: .5s .5s ease-in-out;
+  -moz-transition: .5s .5s ease-in-out;
+  -ms-transition: .5s .5s ease-in-out;
+  -o-transition:.5s .5s ease-in-out;
+  transition:.5s .5s ease-in-out;
+}
+
+#close-lightbox:after {
+	content:'';
+  display:block;
+  position:absolute;
+  width:0px;
+  height:3px;
+  top:24px;
+  left:0;
+  background:white;
+  border-radius:2px;
+  -webkit-transition: .5s 1s ease-in-out;
+  -moz-transition: .5s 1s ease-in-out;
+  -ms-transition: .5s 1s ease-in-out;
+  -o-transition:.5s 1s ease-in-out;
+  transition:.5s 1s ease-in-out;
+}
+
+.lightbox:target {
+  top:0%;
+  bottom:0%;
+  opacity:1;
+}
+
+.lightbox:target img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.lightbox:target ~ #lightbox-controls {
+  top:0px;
+}
+
+.lightbox:target ~ #lightbox-controls #close-lightbox:after {
+  width:50px;
+}
+
+.lightbox:target ~ #lightbox-controls #close-lightbox:before {
+  height:50px;
+}
+
+
+/*END LIGHTBOX*/
