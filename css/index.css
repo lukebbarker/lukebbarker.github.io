@@ -12,33 +12,27 @@ body {
     letter-spacing: 0.5px;
     line-height: 29px
 }
-
 body a {
-    color: #000;
     cursor: pointer;
 }
-
 @media (max-width: 400px) {
     body {
         font-size: 15px;
         line-height: 20px
     }
 }
-
 @media (-webkit-min-device-pixel-ratio: 5) and (min-width: 5100px) {
     body {
         font-size: 42px;
         line-height: 1.01em
     }
 }
-
 @media (orientation: landscape) and (max-width: 667px) {
     body {
         font-size: 15px;
         line-height: 20px
     }
 }
-
 footer {
     width: 90%;
     max-width: 2000px;
@@ -48,136 +42,235 @@ footer {
     margin-left: 5%;
     font-size: 12px;
     color: black;
-    border-top: 1px solid rgba(0,0,0,.1)
-  }
-
-  #footer-text {
+    border-top: 1px solid rgba(0, 0, 0, .1)
+}
+#footer-text {
     font-size: 10px;
     line-height: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 400;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10000;
+    opacity: 0;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
 
-  }
+
+.overlay-desc {
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    border: 3px solid transparent;
+}
+
+.overlay-desc h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    flex: 1 100%;
+    margin: 0;
+
+}
+
+.overlay-desc p {
+      color: white;
+    text-transform: uppercase;
+    font-size: 1vw;
+    line-height: 1.2vw;
+    text-align: center;
+    flex: 1 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.explore {
+    font-size: 1vw;
+    text-align: center;
+    color: white;
+    height: auto;
+    padding: 5px;
+    flex: 1 40%;
+}
+
+.explore-box {
+  width: 20%;
+  margin-left: 40%;
+  border: 2px solid white;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+
+.explore-box:hover {
+  border: 0px solid white;
+  color: black;
+  font-size: 4vw;
+  width: 100%;
+  margin-left: 10%;
+  margin: 0;
+  font-weight: 800;
+}
+
+.overlay-desc.hovered {
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}
 
 
-  /*WRAPPER ELEMENTS GRID*/
+@media (max-width: 700px) {
+  .overlay-desc h1 {
+font-size: 8vw;
+}
+  .overlay-desc p {
+font-size: 2.5vw;
+line-height: 2.7vw;
 
-  .wrapper {
+}
+.explore {
+font-size: 2vw;
+}
+}
+
+
+/*WRAPPER ELEMENTS GRID*/
+
+.wrapper {
     width: 90%;
     max-width: 2000px;
     margin-left: 5%;
-     display: -webkit-flex;
-     display: flex;
-     -webkit-flex-flow: row wrap;
-     flex-flow: row wrap;
-  }
-
-
-  .child {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.child {
     width: 48%;
     border: 0px solid black;
     height: auto;
     margin-bottom: 4%;
     -webkit-transition: .5s ease-out;
     transition: .5s ease-out;
-  }
-
-  .child img {
+}
+.child img {
     height: 100%;
     width: 100%;
-  }
-
-
-  @media (max-width: 700px) {
+}
+@media (max-width: 700px) {
     .child {
-      width: 100%;
+        width: 100%;
     }
-
-  }
-
-  #banner_container {
+}
+#banner_container {
     height: 100vh;
     display: flex;
     align-items: center;
     -webkit-transition: 1s;
     transition: 1s;
     opacity: 0;
-  }
-
-
-    img#banner {
-      height: 100%;
-      width: 100%;
-      padding-bottom: 400px;
-    }
-
-  .opacity {
+}
+img#banner {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 400px;
+}
+.opacity {
     opacity: 1 !important;
-  }
-
-  .shrink {
+}
+.shrink {
     -webkit-transition: 1s;
     transition: 1s;
     height: 10vh !important;
     padding-top: 80px;
-  }
-
-  .shrink_padding {
+}
+.shrink_padding {
     -webkit-transition: 1s;
     transition: 1s;
     padding-bottom: 160px !important;
     width: 50% !important;
     margin-left: 25% !important;
-  }
-
+}
 @media (max-width: 850px) {
-  .shrink {
-    -webkit-transition: 1s ease;
-    transition: 1s ease;
-    height: 7vh !important;
-    padding-top: 50px;
-  }
+    .shrink {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+        height: 7vh !important;
+        padding-top: 50px;
+    }
     img#banner {
-      height: 100%;
-      padding-bottom: 110px;
+        height: 100%;
+        padding-bottom: 110px;
     }
     .shrink_padding {
-      padding-bottom: 110px !important;
+        padding-bottom: 110px !important;
     }
 }
-
 @media (max-width: 700px) {
-  .shrink {
-    -webkit-transition: 1s;
-    transition: 1s;
-    height: 5vh !important;
-    padding-top: 40px;
-  }
-
-  img#banner {
-    height: 100%;
-    padding-bottom: 90px;
-  }
-
-  .shrink_padding {
-    padding-bottom: 90px !important;
-  }
+    .shrink {
+        -webkit-transition: 1s;
+        transition: 1s;
+        height: 5vh !important;
+        padding-top: 40px;
+    }
+    img#banner {
+        height: 100%;
+        padding-bottom: 90px;
+    }
+    .shrink_padding {
+        padding-bottom: 90px !important;
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
 }
-
 @media (max-width: 400px) {
-  .shrink {
-    -webkit-transition: 1s;
-    transition: 1s;
-    height: 0vh !important;
-  }
+    .shrink {
+        -webkit-transition: 1s;
+        transition: 1s;
+        height: 0vh !important;
+    }
+    img#banner {
+        height: 100%;
+        padding-bottom: 80px;
+    }
+    .shrink_padding {
+        padding-bottom: 80px !important;
+    }
 
-  img#banner {
-    height: 100%;
-    padding-bottom: 80px;
-  }
-
-  .shrink_padding {
-    padding-bottom: 80px !important;
-  }
+}
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 1.5s ease forwards;
+}
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+@keyframes come-in {
+    to {
+        transform: translateY(0);
+    }
 }

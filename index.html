@@ -54,28 +54,124 @@
 
         <div class="wrapper">
             <!-- CHILD IMAGES PHOTOSHOP NATIVE DIMENSIONS = 1575 x 1050 -->
-            <div class="child" style="">
+            <div class="child already-visible" style="">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>BELIEF</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_belief.jpg">
             </div>
-            <div class="child" style="margin-left: auto;">
+            <div class="child already-visible" style="margin-left: auto;">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>MOON COLLECTIVE</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_moonCollective.png">
             </div>
-            <div class="child" style="">
+            <div class="child already-visible" style="">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>KHAYELITSHA</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_khayelitsha.png">
             </div>
-            <div class="child" style="margin-left: auto;">
+            <div class="child already-visible" style="margin-left: auto;">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>SUMMER NIGHTS</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_summerNights.jpg">
             </div>
             <div class="child" style="">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>SWAPSOCKS</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_swapsocks.png">
             </div>
             <div class="child" style="margin-left: auto;">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>PILOT</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_pilot.png">
             </div>
             <div class="child" style="">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>AGIZIO</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_agizio.jpg">
             </div>
             <div class="child" style="margin-left: auto;">
+                <div class="overlay">
+                    <div class="overlay-desc">
+                        <h1>PAPER BAG</h1>
+                        <p>THIS IS A PLACEHOLDER FOR A DESCRIPTION OR INFORMATION OR SOMETHING OF THE SORT</p>
+                        <div class="explore">
+                            <a>
+                                <div class="explore-box">EXPLORE</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
                 <img src="img/frontpage_paperBag.jpg">
             </div>
         </div>
@@ -86,6 +182,13 @@
             <p id="footer-text" style="margin-bottom: 0px;">919-259-2096</p>
             <img style="height: 9px;" src="img/dots.svg">
         </footer>
+
+
+        <script>
+            $(".explore-box").hover(function() {
+                $(this).closest(".overlay-desc").toggleClass("hovered")
+            });
+        </script>
 
         <script>
             /**
@@ -132,6 +235,49 @@
             }
             $(document).ready(function() {
                 setTimeout(shrink2, 1350);
+            });
+        </script>
+
+        <script>
+            (function($) {
+
+                $.fn.visible = function(partial) {
+
+                    var $t = $(this),
+                        $w = $(window),
+                        viewTop = $w.scrollTop(),
+                        viewBottom = viewTop + $w.height(),
+                        _top = $t.offset().top,
+                        _bottom = _top + $t.height(),
+                        compareTop = partial === true ? _bottom : _top,
+                        compareBottom = partial === true ? _top : _bottom;
+
+                    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+                };
+
+            })(jQuery);
+
+            var win = $(window);
+
+            var allMods = $(".child");
+
+            allMods.each(function(i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.addClass("already-visible");
+                }
+            });
+
+            win.scroll(function(event) {
+
+                allMods.each(function(i, el) {
+                    var el = $(el);
+                    if (el.visible(true)) {
+                        el.addClass("come-in");
+                    }
+                });
+
             });
         </script>
 
