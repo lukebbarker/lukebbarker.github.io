@@ -51,7 +51,7 @@ footer {
     margin-bottom: 50px;
     margin-left: 5%;
     font-size: 12px;
-    color: black;
+    color: #444444;
     border-top: 1px solid rgba(0, 0, 0, .1)
 }
 #footer-text {
@@ -142,7 +142,7 @@ footer {
 
 .explore-box:hover {
   border: 0px solid transparent;
-  color: black;
+  color: #444444;
   font-size: 4vw;
   width: 100%;
   margin-left: 10%;
@@ -155,21 +155,21 @@ footer {
   -webkit-transition: .4s;
   transition: .4s;
   background-color: white;
-  color: black;
-  border: 3px solid black;
+  color: #444444;
+  border: 3px solid #444444;
   padding-top: 25%;
   padding-bottom: 25%;
 }
 
 .overlay-desc.hovered h1{
-color: black;
+color: #444444;
 font-size: 2vw;
 margin-bottom: 0vw;
 
 }
 
 .overlay-desc.hovered p{
-  color: black;
+  color: #444444;
   font-size: .7vw;
   margin-bottom: 1vw;
 
@@ -198,8 +198,8 @@ font-size: 7.5vw;
   -webkit-transition: .4s;
   transition: .4s;
   background-color: white;
-  color: black;
-  border: 3px solid black;
+  color: #444444;
+  border: 3px solid #444444;
   padding-top: 25%;
   padding-bottom: 25%;
 }
@@ -233,7 +233,7 @@ font-size: 6vw;
 }
 .child {
     width: 48%;
-    border: 0px solid black;
+    border: 0px solid #444444;
     height: auto;
     margin-bottom: 4vw;
     -webkit-transition: .5s ease-out;
@@ -365,7 +365,7 @@ img#banner {
   bottom:100%;
   left:0;
   right:0;
-  background:rgba(0,0,0,.9);
+  background:rgba(255,255,255,.8);
   z-index:501;
   opacity:0;
   padding: 5%;
@@ -374,13 +374,13 @@ img#banner {
 .lightbox .inner {
   width: 100%;
   height: 100%;
-border: 5px solid white;
+border: 5px solid black;
 }
 
 .lightbox .inner h1 {
 width: 100%;
 text-align: center;
-color: white;
+color: black;
 }
 
 .lightbox img {
@@ -401,7 +401,7 @@ color: white;
   top:-70px;
   right:0;
   z-index:502;
-  background:rgba(0,0,0,.1);
+  background:rgba(0,0,0,0);
 }
 
 #close-lightbox {
@@ -428,7 +428,7 @@ color: white;
   width:3px;
   left:24px;
   top:0;
-  background:white;
+  background:black;
   border-radius:2px;
   -webkit-transition: .5s .5s ease-in-out;
   -moz-transition: .5s .5s ease-in-out;
@@ -445,7 +445,7 @@ color: white;
   height:3px;
   top:24px;
   left:0;
-  background:white;
+  background:black;
   border-radius:2px;
   -webkit-transition: .5s 1s ease-in-out;
   -moz-transition: .5s 1s ease-in-out;

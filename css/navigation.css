@@ -36,6 +36,10 @@
     border-bottom: 1px solid white;
 }
 
+#navbar a{
+  color: #444444;
+}
+
 #navbar h1 {
     padding: 10px 10px 10px 0;
     max-width: 250px
@@ -188,7 +192,7 @@
 }
 
 #nav-primaryLinks li.active{
-  border-top: 4px solid rgba(0,0,0,1) !important;
+  border-top: 4px solid #444444 !important;
 }
 
 @media (max-width: 850px) {

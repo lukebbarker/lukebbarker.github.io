@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Luke B. Barker</title>
+        <meta content="Luke B. Barker Portfolio Site" name="description">
+        <meta content="Cole H. Page" name="author">
+        <meta content="ie=edge" http-equiv="x-ua-compatible">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="css/navigation.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/jquery-ui.js"></script>
+
+
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-90553802-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body>
+        <div id="nav-wrapper">
+            <div class="sticky show" id="navbar">
+                <ul id="nav-primaryLinks">
+                    <li>
+                        <a href="identity.html">IDENTITY</a>
+                    </li>
+                    <li class="link-divider">.</li>
+                    <li>
+                        <a href="motion.html">MOTION</a>
+                    </li>
+                    <li class="link-divider">.</li>
+                    <li class="active">
+                        <a href="print.html">PRINT</a>
+                    </li>
+                    <li class="link-divider">.</li>
+                    <li>
+                        <a href="about.html">ABOUT</a>
+                    </li>
+                </ul>
+                <ul id="nav-secondaryLinks">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                </ul>
+                <div id="nav-brandingContainer">
+                    <a><img src="img/logo_black.svg" style="height: 35px;"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <p id="footer-text">LUKE BARKER - 2016</p>
+            <p id="footer-text">LUKEBBARKER@GMAIL.COM</p>
+            <p id="footer-text" style="margin-bottom: 0px;">919-259-2096</p><img src="img/footer_dots.svg" style="height: 9px;">
+        </footer>
+
+
+        <script>
+            /**
+             * Listen to scroll to change header opacity class
+             */
+            function checkScroll() {
+                var startY = $('#navbar').height() / 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('#navbar').addClass("scrolled");
+                } else {
+                    $('#navbar').removeClass("scrolled");
+                }
+            }
+
+            if ($('#navbar').length > 0) {
+                $(window).on("scroll load resize", function() {
+                    checkScroll();
+                });
+            }
+        </script>
+
+    </body>
+
+</html>
