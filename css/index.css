@@ -45,7 +45,6 @@ body a {
 }
 footer {
     width: 90%;
-    max-width: 2000px;
     padding-top: 25px;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -249,7 +248,6 @@ font-size: 6vw;
 
 .wrapper {
     width: 90%;
-    max-width: 2000px;
     margin-left: 5%;
     display: -webkit-flex;
     display: flex;
@@ -409,13 +407,14 @@ img#banner {
   width: 100%;
   height: 75%;
 border: 3px solid #444444;
-padding-top: 100px;
+padding-top: 50px;
 padding-bottom: 100px;
 overflow-y: scroll;
 
 }
 
 .lightbox .inner h1 {
+  font-size: 4vw;
 width: 100%;
 text-align: center;
 color: #444444;
@@ -442,7 +441,59 @@ padding: 30px;
 .lightbox .vimeo {
   width: 49%;
   margin-top: 2%;
+}
 
+@media (max-width: 700px) {
+  .lightbox .vimeo {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .lightbox {
+    padding: 7.5%;}
+}
+
+@media (max-width: 800px) {
+  .lightbox {
+    padding: 10%;
+}
+}
+
+@media (max-width: 600px) {
+  .lightbox {
+    padding-top: 15%;
+}
+}
+
+@media (max-width: 400px) {
+  .lightbox {
+    padding: 5%;
+    padding-top: 20%;
+}
+.lightbox .inner h2 {
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 10px;
+line-height: 12px;
+margin-bottom: 20px;
+}
+
+.lightbox .inner {
+  padding-top: 20px;
+  height: 85%;
+  padding-bottom: 50px;
+}
+
+.lightbox .inner h1{
+  font-size: 10vw;
+}
+
+.lightbox .row {
+  width: 90%;
+  margin-left: 5%;
+}
 }
 
 .embed-container {
@@ -508,7 +559,7 @@ padding: 30px;
   width:3px;
   left:24px;
   top:0;
-  background:black;
+  background:#444444;
   border-radius:2px;
   -webkit-transition: .5s .5s ease-in-out;
   -moz-transition: .5s .5s ease-in-out;
@@ -525,7 +576,7 @@ padding: 30px;
   height:3px;
   top:24px;
   left:0;
-  background:black;
+  background:#444444;
   border-radius:2px;
   -webkit-transition: .5s 1s ease-in-out;
   -moz-transition: .5s 1s ease-in-out;

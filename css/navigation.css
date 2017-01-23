@@ -10,7 +10,6 @@
 
 #navbar {
     margin: 0;
-    max-width: 2000px;
     z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35,6 +34,57 @@
     transform: translate3d(0, 0, 0);
     border-bottom: 1px solid white;
 }
+
+/*LOGO*/
+
+#logo_svg {
+  height: 35px;
+}
+
+#middle {fill:#FFFFFF;transition: fill .6s ease;}
+#outside {fill:#444444;transition: fill .6s ease;}
+#center {fill:#444444;transition: fill .6s ease;}
+
+#logo_svg:hover #outside{}
+
+#logo_svg:hover #center{fill:#659984;}
+#logo_svg:hover #middle{}
+
+#logo_lightbox {
+  background-color: rgba(101,153,132,.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+
+}
+
+.logolightbox {
+  display: none;
+}
+
+#logo_lightbox_close:before {background: white;}
+#logo_lightbox_close:after {background: white;}
+
+/*LOGO LIGHTBOX NAVIGATION*/
+
+#logo_lightbox h1 {
+  color: #444444;
+  font-weight: 800;
+  font-size: 8vw;
+  text-align: center;
+  line-height: 8vw;
+  margin: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#logo_lightbox h1:hover {
+color: white;
+}
+
+/*END LOGO*/
 
 #navbar a{
   color: #444444;
@@ -345,3 +395,6 @@
     font-size: 10px;
   }
 }
+
+
+/*LOGO LIGHTBOX NAVIGATION*/
