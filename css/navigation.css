@@ -72,16 +72,48 @@
 #logo_lightbox h1 {
   color: #444444;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 6vw;
   text-align: center;
-  line-height: 8vw;
+  line-height: 6vw;
   margin: 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
+@media (max-width: 1200px) {
+  #logo_lightbox h1 {
+    font-size: 9vw;
+    line-height: 9vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  #logo_lightbox h1 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+}
+
+@media (max-width: 700px) {
+  #logo_lightbox h1 {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+}
+
+
+
 #logo_lightbox h1:hover {
 color: white;
+}
+
+h1#logo_lightbox_home {
+  border-bottom: 5px solid #444444;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#logo_lightbox_home:hover {
 }
 
 /*END LOGO*/
